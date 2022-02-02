@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-title>Novo Produto</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" 
+      [(ngModel)]="user.name" name="name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="E-mail"
+      [(ngModel)]="user.email" name="email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Genero"
+      [(ngModel)]="user.gender" name="gender">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="createUser()" >
+    Salvar
+  </button>
+  <button mat-raised-button mat-dialog-close>
+    Cancelar
+  </button>
+</mat-card>

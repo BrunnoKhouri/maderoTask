@@ -1,0 +1,43 @@
+<!-- <section>
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      <div class="content-text">
+        <h2>
+          Não perca tempo, cadastre-se
+          agora mesmo, para aproveitar do melhor !
+        </h2>
+        <button mat-raised-button>Dashboard</button>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <img src="./../../../assets/layout/home-img.png" alt="HomeLogo" width="70%">
+    </mat-grid-tile>
+  </mat-grid-list>
+</section> -->
+
+<div fxLayout="row wrap" fxLayoutAlign="space-between center" class="container banner">
+  <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" fxLayout="column"
+    fxLayoutAlign="center center" class="banner__content">
+    <h1 class="banner__title">
+      A GENTE QUER
+      <strong>VOCÊ...</strong>
+    </h1>
+    <h2 class="banner__subtitle">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat tempore, excepturi repellendus, officiis
+      temporibus necessitatibus assumenda natus molestias sequi maxime harum non vel doloremque iure! Delectus aliquid
+      consectetur vel hic.
+    </h2>
+
+    <button (click)="onDashboard()" mat-flat-button class="button__primary">
+      SAIBA MAIS...
+    </button>
+  </div>
+  <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" fxLayoutAlign="center center"
+    class="banner__media">
+    <picture>
+      <source type="image/png" srcset="./../../../assets/layout/home-img.png" alt="Pessoa Sorrindo"
+        class="banner__image" />
+      <img src="./../../../assets/layout/home-img.png" alt="Pessoa Sorrindo" class="banner__image" />
+    </picture>
+  </div>
+</div>

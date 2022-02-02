@@ -1,0 +1,70 @@
+<div class="batch__documents__blue__block" fxLayout="column" fxLayoutAlign="center center">
+  <div class="batch__documents__texts">
+    <h1 class="titles__two">Gerenciamentos de usuários</h1>
+    <p class="subtitles__three">Adicione, remova ou edite os usuários do Madero.</p>
+  </div>
+</div>
+<section>
+  <mat-card class="mat-elevation-z8">
+    <div class="content-table-header">
+      <h3>Lista de Usuários</h3>
+      <button (click)="navigateToUserCreate()" mat-flat-button>
+        <p>novo usuário</p>
+      </button>
+    </div>
+    <div>
+      <table mat-table [dataSource]="dataSource">
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Nome </th>
+          <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+        </ng-container>
+
+        <!-- E-mail Column -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> E-mail </th>
+          <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+        </ng-container>
+
+          <!-- Gender Column -->
+          <ng-container matColumnDef="gender">
+            <th mat-header-cell *matHeaderCellDef> Genero </th>
+            <td mat-cell *matCellDef="let row"> 
+            <span *ngIf="row.gender == 'female' || row.gender =='femenino'">Femenino</span>  
+            <span *ngIf="row.gender == 'male' || row.gender =='masculino'">Masculino</span>  
+            </td>
+          </ng-container>
+
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef> Status </th>
+          <td mat-cell *matCellDef="let row">
+            <mat-chip-list>
+              <mat-chip class="active" *ngIf="row.status == 'active' || row.status =='ativo'">ATIVO</mat-chip>
+              <mat-chip class="inactive" *ngIf="row.status == 'inactive' || row.status == 'inativo'">INATIVO</mat-chip>
+            </mat-chip-list>
+          </td>
+        </ng-container>
+
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> </th>
+          <td mat-cell *matCellDef="let row">
+            <a (click)="navigateToUserUpdate(row)" class="icon">
+              <mat-icon>edit</mat-icon>
+            </a>
+            <a (click)="navigateToUserDelete(row)" class="icon">
+              <mat-icon>delete</mat-icon>
+            </a>
+          </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+  </mat-card>
+</section>

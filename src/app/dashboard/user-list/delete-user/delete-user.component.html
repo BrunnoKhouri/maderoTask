@@ -1,0 +1,15 @@
+<section>
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <h1 fxFlex="100">Excluir produto</h1>
+    <h3 >
+      Quer realmente excluir o usuário
+      "<strong [innerHtml]="data.name"></strong>".<br>
+      Essa ação não poderá ser desfeita.           
+  </h3>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center">
+    <div>
+      <button (click)="deleteUser()" mat-raised-button fxFlexFill >EXCLUIR USUÁRIO</button>
+    </div>
+  </div>
+</section>

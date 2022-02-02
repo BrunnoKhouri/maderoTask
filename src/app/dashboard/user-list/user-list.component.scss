@@ -1,0 +1,88 @@
+@import "../../../_theme";
+@import "../../../styles.scss";
+
+.batch__documents__blue__block {
+  height: 300px;
+  width: 100%;
+  background-color: #000000;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.batch__documents__texts {
+  color: $white;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  mat-card {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    min-height: 340px;
+    bottom: 165px;
+  }
+}
+
+.content-table-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    background-color: black;
+    color: white;
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+    p {
+      font-family: 'Lato', sans-serif;
+      font-size: 15px;
+    }
+  }
+
+}
+
+table {
+  width: 100%;
+}
+
+mat-chip {
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.active {
+  background-color: #b8f8c6 !important;
+  color: $success-color !important;
+  font-weight: bold;
+  text-align: center !important;
+  
+}
+
+.inactive {
+    background-color: #fdaeae !important;
+    color: #df002d !important;
+    font-weight: bold; 
+    text-align: center !important;  
+}
+
+mat-icon{
+    cursor: pointer;
+}
+
+.icon{
+    color: #000000;
+}

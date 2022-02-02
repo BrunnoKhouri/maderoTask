@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,400;1,700&family=Supermercado+One&display=swap');
+@import "./_theme";
+
+body{
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+    width: 100%;   
+    margin: 0px; 
+}
+
+
+ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  .strong {
+    font-weight: 700;
+  }
+  .container {
+    width: 90%;
+    max-width: 1279px;
+    margin: 0 auto;
+  }
+  
+  // --------------------------------------------- Buttons
+  button,
+  .button {   
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    border-radius: 20px;
+    max-width: max-content;
+    min-width: min-content;
+    padding: 4px 24px;
+    letter-spacing: 0;
+    transition: all 0.25s ease;
+    text-transform: uppercase;
+    border: none;
+    &__primary {
+      background-color: #000000;
+      color: $white;
+    }
+    &__secondary {
+      background-color: rgba($blue, 0.12);
+      color: $blue;
+    }
+    &__link {
+      background-color: $transp;
+      color: $blue;
+      padding-left: 0;
+    }
+    &__outline {
+      border: 1px solid $blue;
+      color: $blue;
+    }
+  }
+  
+  
+  // --------------------------------------------- Section
+  .section {
+    &__title {     
+      color: $ultradark-grey-color;
+    }
+  }
+  
+  .msg-success {
+    background-color: #28a745;
+    color: #fff
+  }
+  
+  .msg-failure{
+    background-color: rgb(240, 82, 82);
+    color: #fff;
+  }

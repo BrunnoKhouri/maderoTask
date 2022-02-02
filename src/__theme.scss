@@ -1,0 +1,57 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+// --------------------------------------------- Typography
+$line-height: 150%;
+$font-size: 1em;
+// --------------------------------------------- Constants
+$transp: rgba(0, 0, 0, 0);
+$background-color: mat-color($mat-grey, 50);
+$white: rgba(255, 255, 255, 1);
+$ultralight-grey-color: rgba(0, 0, 0, 0.06);
+$light-grey-color: rgba(0, 0, 0, 0.12);
+$medium-grey-color: rgba(0, 0, 0, 0.38);
+$dark-grey-color: rgba(0, 0, 0, 0.6);
+$ultradark-grey-color: rgba(0, 0, 0, 0.87);
+$darker-grey-color: rgba(0, 0, 0, 1);
+$yellow: #ffb300;
+$blue: #1976d2;
+$dark-blue: #004ba0;
+$light-blue: #63a4ff;
+// --------------------------------------------- Vars
+$primary-light-color: mat-color($mat-blue, 100);
+$primary-color: mat-color($mat-blue, 500);
+$primary-dark-color: mat-color($mat-blue, 900);
+$primary: mat-palette($mat-blue, 800);
+$accent-light-color: mat-color($mat-amber, 50);
+$accent-color: mat-color($mat-amber, 600);
+$accent-dark-color: #c68400;
+$accent: mat-palette($mat-amber, 500, 100, 50);
+$secondary-light-color: mat-color($mat-amber, 300);
+$secondary-color: mat-color($mat-amber, 500);
+$secondary-dark-color: mat-color($mat-amber, 600);
+$secondary: mat-palette($mat-amber, 600, 500, 300);
+$success-color: mat-color($mat-green, A700);
+$success-light-color: mat-color($mat-green, A200);
+$danger-light-color: #ff7961;
+$danger-color: mat-color($mat-red, 500);
+$danger-dark-color: #ba000d;
+$warning-light-color: #ffff6b;
+$warning-color: mat-color($mat-amber, 300);
+$warning-dark-color: #c6a700;
+$warn: mat-palette($mat-amber, 300);
+$info-color: mat-color($mat-teal, 300);
+$plain-text-color: $ultradark-grey-color;
+$link-color: mat-color($mat-blue, 900);
+// --------------------------------------------- Sizes
+$max-width: 1599px;
+$max-width-small: 959px;
+$border-radius: 4px;
+// --------------------------------------------- Media Queries Sizes
+$lg-screen: 1279px;
+$md-screen: 959px;
+$sm-screen: 599px;
+
+// --------------------------------------------- Layout
+$cia-theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($cia-theme);

@@ -1,0 +1,23 @@
+<section>  
+  <mat-card-title>Editar Usuário</mat-card-title>
+  <form >
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="user.name" name="name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="E-mail" [(ngModel)]="user.email" name="Email">
+    </mat-form-field>
+    <mat-form-field>      
+      <input matInput placeholder="Genero" [(ngModel)]="user.gender" name="gender">
+    </mat-form-field>    
+    <mat-form-field>      
+      <input matInput placeholder="Status" [(ngModel)]="user.status" name="status">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="updateUser()">
+    Salvar
+  </button>
+  <button mat-raised-button mat-dialog-close>
+    Cancelar
+  </button>
+</section>
