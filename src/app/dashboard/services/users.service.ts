@@ -11,7 +11,7 @@ import { Users } from './../model/users.model';
 })
 export class UsersService {
 
-  baseUrl = "http://localhost:3002/users";
+  baseUrl = "https://61de2583f60e8f0017668be1.mockapi.io/users";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -34,7 +34,7 @@ export class UsersService {
 
   public read(): Observable<Users[]>{
     return this.http.get<Users[]>(this.baseUrl).pipe(
-      map((obj) => obj),
+      map((obj) => obj),      
       catchError(e => this.errorHandler(e))
     );
   }
