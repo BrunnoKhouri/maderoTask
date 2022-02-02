@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AfterViewInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSort } from '@angular/material';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Users } from './../model/users.model';
@@ -23,6 +23,7 @@ export class UserListComponent implements OnInit {
   constructor(private usersService: UsersService, private dialog: MatDialog) { }
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   ngOnInit() {
     this.tableLoading();
@@ -32,6 +33,7 @@ export class UserListComponent implements OnInit {
     this.usersService.read().subscribe(users => {
       this.dataSource = new MatTableDataSource<Users>(users);
       this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
       console.log(users);
     });
   }
